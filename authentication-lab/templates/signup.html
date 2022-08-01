@@ -4,40 +4,60 @@
     <meta charset="UTF-8">
     <title>Signup</title>
 </head>
-<body>
-    <form method="post" action="/signup">
+<body><center>
+    <form method="POST" action="/signup">
         <!-- Heading -->
         <h4>
-            Create an account
+            Create account
         </h4>
 
         <!-- Subheading -->
         <p >
-            Please fill up your information below to sign up.
+            fill up your info to sign up.
         </p>
 
         <!-- Email -->
         <div>
-            <label>Email address*</label>
+            <label>Email address</label>
             <div>
                 <input type="email"  name="email" id="emailStr" required>
             </div>
-        </div>
+        </div><br>
 
         <!-- Password -->
         <div>
-            <label>Password*</label>
+            <label>Password</label>
             <div class="input-group">
                 <input type="password"  name="password" minlength="6">
             </div>
+        </div><br>
+        <div>
+            <label>Full Name</label>
+            <div>
+                <input  name="full_name" required>
+            </div><br>
         </div>
+        <div>
+            <label>Username</label>
+            <div>
+                <input   name="username" required>
+            </div>
+        </div><br>
+        <div>
+            <label>Bio:</label>
+            <div>
+                <input  name="bio"  maxlength="280" required>
+            </div>
+        </div><br>
         
         <!-- Button -->
         <div>
             <input type="submit"/>
         </div>
     </form>
+
+    <font color="red">{{ error }}</font>
     <br>
     <a href="/"><button>signin</button></a>
-</body>
+</center></body>
 </html>

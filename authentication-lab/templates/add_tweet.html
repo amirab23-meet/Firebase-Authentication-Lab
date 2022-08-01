@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Title</title>
 </head>
-<body>
+<body><center>
     Great Job!
-</body>
+    <form action="/add_tweet" method="POST">
+      <div>
+        <label>Title:</label>
+        <div>
+            <input   name="title" required>
+        </div>
+    </div><br>
+    <div>
+        <label>your tweet:</label>
+        <div>
+            <input  name="text"  maxlength="280" required>
+        </div>
+    </div><br>
+
+    <!--Buttooon-->
+    <div>
+            <input type="submit"/>
+        </div><br>
+    </form>
+    
+      <a href={{url_for("signout")}}><button>Sign out</button></a>
+</center></body>
 </html>
