@@ -9,7 +9,8 @@ config = {
   "storageBucket": "cs-amir-gp-f.appspot.com",
   "messagingSenderId": "531475169244",
   "appId": "1:531475169244:web:06192ca20d569bc89a5919",
-  "measurementId": "G-SL0HLVBCQG"
+  "measurementId": "G-SL0HLVBCQG",
+  "databaseURL":"https://cs-amir-gp-f-default-rtdb.europe-west1.firebasedatabase.app/"
 
 
   
@@ -18,6 +19,7 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
+db = firebase.database()
 
 
 
